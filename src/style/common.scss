@@ -1,0 +1,27 @@
+
+/* @import '~antd/dist/antd.css'; */
+@import './default.scss';
+
+.red{
+    color: red;
+}
+.green{
+  color: green;
+}
+.container{
+  .nav-left{
+      background-color:#001529;
+      color: #ffffff;
+      height: calc(100vh);
+  }
+  .main{
+      height: calc(100vh);
+      background-color: $colorB;
+      overflow: auto;
+  }
+  .content{
+      position: relative;
+      padding: 20px;
+      background-color: $colorL;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../style/default.scss';
+.carousel {
+    .card-wrap {
+        width: 800px;
+    }
+
+    .ant-carousel .slick-slide {
+        text-align: center;
+        height: 160px;
+        line-height: 160px;
+        background-color: $colorT;
+        .img{
+            height: 150px;
+            width: 100%;
+        }
+    }
+}

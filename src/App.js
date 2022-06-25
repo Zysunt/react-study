@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import Pages from './pages'
+import Nav from './views/nav';
+import Header from './views/header'
+import Footer from './views/footer'
+import { Row,Col } from 'antd'
+import './style/common.scss'
+// import Home from './pages/home';
+import routes from './router/' // 引入全局配置的路由规则
+import { renderRoutes } from 'react-router-config' // 引入渲染路由的方法
 
 function App() {
+  // console.log(routes,'渲染的路由')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Row className="container">
+          <Col className='nav-left' span={5}>
+              <Nav />
+          </Col>
+          <Col className='main' span={19}>
+              <Header />
+              <Row className='content'>
+                  {/* <Home /> */}
+                  {renderRoutes(routes)}
+              </Row>
+              <Footer />
+          </Col>
+      </Row>
+      {/* <Pages /> */}
     </div>
   );
 }
